@@ -1,2 +1,9 @@
 # Oct25_Assignment_2
-Practicing Issues and Branches
+
+This is the Second Assignment
+## The purpose of this repo is to
+  - Creating Issues
+  - Creating Branches
+  - Making Pull Request
+  - Merging Branches
+
