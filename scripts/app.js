@@ -22,10 +22,18 @@ function calculateTimeRemaining() {
 function updateCountdown() {
   const timeRemaining = calculateTimeRemaining();
 
-  daysEl.innerHTML = (timeRemaining.days);
-  hoursEl.innerHTML = (timeRemaining.hours);
-  minsEl.innerHTML = (timeRemaining.minutes);
-  secsEl.innerHTML = (timeRemaining.seconds);
+function formatTime(time) {
+  if (time < 10) {
+    return '0' + time;
+  } else {
+    return time.toString();
+  }
+}
+
+  daysEl.innerHTML = formatTime(timeRemaining.days);
+  hoursEl.innerHTML = formatTime(timeRemaining.hours);
+  minsEl.innerHTML = formatTime(timeRemaining.minutes);
+  secsEl.innerHTML = formatTime(timeRemaining.seconds);
 
   setTimeout(updateCountdown, 1000);
 }
